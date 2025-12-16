@@ -14,3 +14,10 @@ spec:
             name: test-java-app-service
             port:
               number: 80
+      - path: /test_app2
+        pathType: Prefix
+        backend:
+          service:
+            name: test-java-app-service
+            port:
+              number: 80
