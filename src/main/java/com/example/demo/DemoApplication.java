@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @SpringBootApplication
@@ -21,7 +22,7 @@ public class DemoApplication {
 	}
 
 	@PostMapping("/test_app2")
-    public String test_app2(String test_str) {
+    public String test_app2(@RequestBody String test_str) {
         return "Hello from Test App! "+test_str;
 	}
 	
